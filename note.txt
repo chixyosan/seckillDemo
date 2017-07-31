@@ -1,0 +1,22 @@
+1.创建项目mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.seckill -DartifactId=seckill -DarchetypeArtifactId=maven-archetype-webapp
+2.pom.xml配置
+  junit：4.11
+  1).日志 java日志：slf4j,log4j,logback,common-logging
+               slf4j:规范/接口
+               日志实现：log4j,logback,common-logging
+               本项目使用：slf4j+logback
+     slf4j-api,logback-core,logback-classic(实现slf4j接口并整合)
+  2).数据库相关的依赖:
+          mysql-connector-java,c3p0
+  3).DAO框架：Mybatis依赖
+          mybatis,mybatis-spring(Mybatis自身实现的spring整合依赖)
+  4).servlet web 相关依赖:
+          standard,jstl,jackson-databind,javax.servlet-api
+  5).spring依赖:
+          a.spring核心依赖:spring-core,spring-beans,spring-context
+          b.spring DAO层依赖:spring-jdbc,spring-tx
+          c.spring web相关的依赖:spring-web,spring-webmvc
+          d.spring test相关的依赖:spring-test
+3.数据库脚本见schema.sql文件
+
+mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.seckillDemo -DartifactId=seckillDemo -DarchetypeArtifactId=maven-archetype-webapp
