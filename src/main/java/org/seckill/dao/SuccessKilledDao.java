@@ -15,9 +15,9 @@ public interface SuccessKilledDao {
      */
     int insertSuccessKilled(long seckillId,long userPhone);
     /**
-     * @description 
+     * @description
      * @authod zefeng
-     * @Date 2017/7/31 0031 下午 21:10
+     * @Date 2017/7/31 0031 下午 21:31
      * @return 
      */
     SuccessKilled queryByIdWithSeckill(long seckillId);

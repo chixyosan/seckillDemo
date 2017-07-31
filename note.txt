@@ -1,4 +1,4 @@
-1.创建项目mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.seckill -DartifactId=seckill -DarchetypeArtifactId=maven-archetype-webapp
+1.创建项目mvn archetype:generate-DarchetypeCatalog=internal -DgroupId=com.seckillDemo -DartifactId=seckillDemo -DarchetypeArtifactId=maven-archetype-webapp
 2.pom.xml配置
   junit：4.11
   1).日志 java日志：slf4j,log4j,logback,common-logging
@@ -18,5 +18,10 @@
           c.spring web相关的依赖:spring-web,spring-webmvc
           d.spring test相关的依赖:spring-test
 3.数据库脚本见schema.sql文件
+4.Mybatis 处理符号：
+    第一种： 原符号       <        <=      >       >=       &        '        "
+            替换符号    &lt;    &lt;=   &gt;    &gt;=   &amp;   &apos;  &quot;
+    第二种： 大于等于   <![CDATA[ >= ]]>
+            小于等于   <![CDATA[ <= ]]>
 
-mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.seckillDemo -DartifactId=seckillDemo -DarchetypeArtifactId=maven-archetype-webapp
+

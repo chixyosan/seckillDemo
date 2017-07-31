@@ -30,5 +30,5 @@ public interface SeckillDao {
      * @Date 2017/7/31 0031 下午 21:09
      * @return
      */
-    List<Seckill> queryAll(int offet, int limit);
+    List<Seckill> queryAll(int offset, int limit);
 }
