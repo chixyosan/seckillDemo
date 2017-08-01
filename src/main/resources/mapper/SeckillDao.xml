@@ -22,7 +22,7 @@
         where seckill_id = #{seckillId}
     </select>
 
-    <select id="queryById" resultType="Seckill" parameterType="int">
+    <select id="queryAll" resultType="Seckill" parameterType="int">
         SELECT *
         FROM seckill
         ORDER BY create_time DESC
