@@ -7,8 +7,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.Date;
+import java.util.List;
 
-import static org.junit.Assert.*;
 
 /**
  * 配置spring和junit整合，junit启动时加载spring IOC容器
@@ -26,6 +27,9 @@ public class SeckillDaoTest {
 
     @Test
     public void reduceNumber() throws Exception {
+        Date killTime = new Date();
+        int updateCount = seckillDao.reduceNumber(1000L,killTime);
+        System.out.println("updateCount=" + updateCount);
     }
 
     @Test
@@ -36,9 +40,19 @@ public class SeckillDaoTest {
         System.out.println(seckill);
     }
 
+    /**
+     * 1000元秒杀note4
+     Seckill [seckillId=1008, name=1000元秒杀note4, number=100, startTime=Sun Jul 30 08:00:00 CST 2017, endTime=Mon Jul 31 08:00:00 CST 2017, createTime=Mon Jul 31 07:28:45 CST 2017]
+     *
+     */
+
+    //java没有保存形参的记录
     @Test
     public void queryAll() throws Exception {
-
+        List<Seckill> seckills = seckillDao.queryAll(0,100);
+        for(Seckill seckill : seckills){
+            System.out.println(seckill);
+        }
     }
 
 }
